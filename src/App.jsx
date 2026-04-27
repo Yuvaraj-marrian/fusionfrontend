@@ -66,7 +66,7 @@ function Game() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/game', {
+      const response = await fetch('https://fusionbackend-1.onrender.com/api/game', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -115,10 +115,10 @@ function Results() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const qRes = await fetch('http://localhost:5000/api/questions');
+        const qRes = await fetch('https://fusionbackend-1.onrender.com/api/questions');
         const qData = await qRes.json();
 
-        const gRes = await fetch('http://localhost:5000/api/game');
+        const gRes = await fetch('https://fusionbackend-1.onrender.com/api/game');
         const gData = await gRes.json();
 
         setQuestions(qData);
@@ -175,7 +175,7 @@ function VotingQ() {
   useEffect(() => {
     const fetchConfig = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/voting/config');
+        const res = await fetch('https://fusionbackend-1.onrender.com/api/voting/config');
         if (!res.ok) {
           throw new Error(`Server returned status: ${res.status}`);
         }
@@ -222,7 +222,7 @@ function VotingQ() {
     const questionId = questions[currentIndex].id || questions[currentIndex];
 
     try {
-      await fetch('http://localhost:5000/api/voting/vote', {
+      await fetch('https://fusionbackend-1.onrender.com/api/voting/vote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ questionId, optionId })
@@ -296,7 +296,7 @@ function VoteResults() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/voting/results');
+        const res = await fetch('https://fusionbackend-1.onrender.com/api/voting/results');
         const data = await res.json();
         setResultsData(data);
       } catch (err) {
