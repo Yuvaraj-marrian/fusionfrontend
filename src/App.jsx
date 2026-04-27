@@ -34,7 +34,7 @@ function Questions() {
       <h2>Questions</h2>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>1. One thing you took ownership</label>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>1. One thing you took complete ownership</label>
           <textarea
             value={ownership}
             onChange={e => setOwnership(e.target.value)}
@@ -43,7 +43,7 @@ function Questions() {
           />
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>2. 1 thing you slacked off</label>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>2. One thing you passed on to someone</label>
           <textarea
             value={slacked}
             onChange={e => setSlacked(e.target.value)}
@@ -90,7 +90,7 @@ function Game() {
       <h2>Game</h2>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Tell me your intrusive thoughts</label>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>say something about quirkiness</label>
           <textarea
             value={thoughts}
             onChange={e => setThoughts(e.target.value)}
